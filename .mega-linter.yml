@@ -1,0 +1,17 @@
+# Configuration file for MegaLinter
+# See all available variables at https://megalinter.io/configuration/ and in linters documentation
+
+APPLY_FIXES: all
+ENABLE:
+  - YAML
+  - MARKDOWN
+  - BICEP
+  - POWERSHELL
+MARKDOWN_MARKDOWN_LINK_CHECK_DISABLE_ERRORS: true # Soft error on broken links
+YAML_V8R_DISABLE_ERRORS: true # Soft error on YAML validation where schema is missing
+YAML_YAMLLINT_DISABLE_ERRORS: true # Soft error on YAML validation where format is slightly wrong for Azure DevOps pipelines and GitHub Actions workflows
+PRINT_ALL_FILES: false
+SHOW_ELAPSED_TIME: true
+FLAVOR_SUGGESTIONS: false
+JSON_REPORTER: true
+FILTER_REGEX_EXCLUDE: .*/(src/modules/[^/]+|docs/wiki/(Bicep|PS-Rule|Scripts|Pricing|Policy|Firewall)).*\.md$

@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "path": "./",
+      "name": "Hero Asset Template"
+    },
+    {
+      "name": "Wiki",
+      "path": "./docs/wiki/"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      ".idea": true
+    },
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.codeFormatting.newLineAfterCloseBrace": false,
+    "powershell.codeFormatting.preset": "Stroustrup",
+    "powershell.cwd": "Hero Asset Template",
+    "dotnet.defaultSolution": "disable",
+    "[powershell]": {
+      "editor.defaultFormatter": "ms-vscode.powershell"
+    },
+    "[bicep]": {
+      "editor.defaultFormatter": "ms-azuretools.vscode-bicep"
+    },
+    "[bicep-params]": {
+      "editor.defaultFormatter": "ms-azuretools.vscode-bicep"
+    }
+  }
+}
