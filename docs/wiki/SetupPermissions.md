@@ -11,4 +11,5 @@ There are a number of ways you can run the powershell script to grant us permiss
 
 ## PowerShell Script
 
-The script is located in the `scripts` folder [set-insight-aobo.ps1](scripts/set-insight-aobo.ps1)
+The script is located in the `scripts` folder `set-insight-aobo.ps1`
+
