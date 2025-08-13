@@ -10,10 +10,10 @@
       "pattern": "^(https:\\/\\/)?([www.]?)+(microsoft.com\\/)+[\\w\\-\\._~:/?#[\\]@!\\$&'\\(\\)\\*\\+,;=.]+$"
     },
     {
-      "pattern": "*(wiki)*"
+      "pattern": ".*wiki.*"
     },
     {
-      "pattern": "*(scripts/)*"
+      "pattern": ".*scripts/.*"
     }
   ],
   "httpHeaders": [

@@ -1,0 +1,25 @@
+name: Repository Management
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 8 * * 1-5'
+
+concurrency:
+  group: repository-management
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  # This job is used to update the repository's wiki.
+  wiki:
+    name: 'Publish wiki from docs/wiki'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: spenserblack/actions-wiki@v0.3.0
+        with:
+          path: docs/wiki
