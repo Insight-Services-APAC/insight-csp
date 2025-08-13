@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-## Azure Landing Zones Bicep Repo - Wiki
+## Insight CSP Wiki
 
 <!-- markdownlint-restore -->
 
