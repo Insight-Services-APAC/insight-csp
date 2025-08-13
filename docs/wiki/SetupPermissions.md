@@ -6,9 +6,9 @@ Insight require Admin On Behalf Of (AOBO) authorisation at subscription level in
 
 There are a number of ways you can run the powershell script to grant us permissions.
 
-- If you are _NOT_ a regular Powershell user, we recommend using the Azure Cloud Shell. You can read about the Azure Cloud shell [here](https://docs.microsoft.com/en-us/azure/cloud-shell/overview)
-- If you are a regular Powershell user you can run the commands below once you have connected to a subscription.
+- If you are _NOT_ a regular Powershell user, we recommend using the Azure Cloud Shell. You can read about the Azure Cloud Shell in the [Azure Cloud Shell overview documentation](https://docs.microsoft.com/en-us/azure/cloud-shell/overview)
+- If you are a regular Powershell user you can run the script directly.
 
 ## PowerShell Script
 
-The script can be found in the `scripts` folder `set-insight-aobo.ps1`
+The script is located in the `scripts` folder [set-insight-aobo.ps1](scripts/set-insight-aobo.ps1)
