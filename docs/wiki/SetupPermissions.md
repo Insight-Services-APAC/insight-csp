@@ -11,4 +11,4 @@ There are a number of ways you can run the powershell script to grant these perm
 
 ## PowerShell Script
 
-The `set-insight-aobo.ps1` script is used to grant the necessary permissions and can be found in the [scripts](./scripts) folder.
+The `set-insight-aobo.ps1` script is used to grant the necessary permissions and can be found in the ./scripts folder.
