@@ -249,6 +249,7 @@ try {
     $successCount = 0
     $errorCount = 0
     $skippedCount = 0
+    $disabledCount = 0
     
     Write-Host "`nStarting role assignments..." -ForegroundColor Green
     
@@ -259,6 +260,20 @@ try {
         Write-Progress -Activity "Assigning $RoleDefinitionName role" -Status "Processing $i of $total" -PercentComplete $percent -CurrentOperation $sub.Id
         try {
             Write-Host "Processing subscription: $($sub.Name) ($($sub.Id))" -ForegroundColor Cyan
+            
+            # Check if subscription is in a disabled state
+            if ($sub.State -eq 'Disabled') {
+                Write-Warning "Skipping disabled subscription: $($sub.Name) ($($sub.Id))"
+                $disabledCount++
+                continue
+            }
+            
+            # Check if subscription is in an active state
+            if ($sub.State -ne 'Active') {
+                Write-Warning "Skipping subscription in '$($sub.State)' state: $($sub.Name) ($($sub.Id))"
+                $skippedCount++
+                continue
+            }
             
             # Check if role assignment already exists
             $scopeVar = "/subscriptions/$($sub.Id)"
@@ -296,6 +311,7 @@ try {
     Write-Host "Total subscriptions processed: $($subscriptions.Count)" -ForegroundColor White
     Write-Host "Successful assignments: $successCount" -ForegroundColor Green
     Write-Host "Skipped (already assigned): $skippedCount" -ForegroundColor Yellow
+    Write-Host "Disabled/Other states skipped: $disabledCount" -ForegroundColor Gray
     Write-Host "Errors: $errorCount" -ForegroundColor Red
     
     if ($errorCount -eq 0) {
