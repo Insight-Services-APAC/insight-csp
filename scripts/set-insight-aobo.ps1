@@ -36,7 +36,7 @@ param(
     [string]$FilePath,
     
     [Parameter(Mandatory = $false)]
-    [ValidateSet("AU", "NZ", "HK", "SG")]
+    [ValidateSet('AU', 'NZ', 'HK', 'SG')]
     [string]$Region,
 
     [Parameter(Mandatory = $false, HelpMessage = 'Skip interactive confirmation')]
